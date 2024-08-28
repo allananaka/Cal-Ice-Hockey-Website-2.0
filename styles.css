@@ -140,12 +140,12 @@ header.sticky ul li a {
     margin-top: 50px;
     margin-right: 50px;
     margin-left: 50px;
-    font-family: 'Poppins', sans-serif;
-    color: rgb(0,38,118); /* Adjust text color */
-    font-weight: bold; /* Make the text stand out */
+    font-family: "Spectral", serif;
+    font-weight: 500;
+    font-style: italic;
+    color: rgb(0,38,118);
     font-size: 75px;
     margin-bottom: 10px;
-    font-style: italic;
 }
 .roster-button {
     margin-top: 10px;
@@ -153,6 +153,8 @@ header.sticky ul li a {
     font-size: 3em;
     text-decoration: none;
     color: rgb(0,38,118);
+    font-family: "Spectral", serif;
+    font-weight: 500;
     font-style: italic;
     border: 4px solid rgb(0,38,118);
     border-radius: 15px;
@@ -199,18 +201,18 @@ header.sticky ul li a {
     margin-top: 50px;
     margin-right: 50px;
     margin-left: 50px;
-    font-family: 'Poppins', sans-serif;
-    color: white; /* Adjust text color */
-    font-weight: bold; /* Make the text stand out */
+    font-family: "Spectral", serif;
+    font-weight: 500;
+    font-style: italic;
+    color: white;
     font-size: 75px;
     margin-bottom: 10px;
-    font-style: italic;
     text-align: center;
 }
 .logoContainer {
     display: flex;
     flex-direction: row;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 .StreamCal {
@@ -229,12 +231,14 @@ header.sticky ul li a {
     height: auto;
 }
 .streaming-button {
+    font-family: "Spectral", serif;
+    font-weight: 500;
+    font-style: italic;
     margin-top: 10px;
     background: black;
     font-size: 3em;
     text-decoration: none;
     color: white;
-    font-style: italic;
     border: 4px solid white;
     border-radius: 15px;
 }
