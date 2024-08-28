@@ -95,7 +95,9 @@ header.sticky ul li a {
 .MeetTheBears {
     background: white;
     width: 100%;
-    margin: 10rem auto;
+    max-height: 500px;
+    margin: 0 auto;
+    padding: 0;
 }
 .boxMTB {
     display: flex;
@@ -115,9 +117,14 @@ header.sticky ul li a {
     border-bottom-right-radius: 150px;
 }
 .rightMTB {
-    margin: 50px 0px 200px 0px;
+    position: relative;
+    top: -50px;
+    margin: 10px 0px 10px 0px;
     flex-basis: 40%;
+    flex-grow:1;
+    flex-shrink: 1;
     width: 100%;
+    max-width: 600px;
     display: flex;
     text-align: center;
     align-items: center;
@@ -134,7 +141,7 @@ header.sticky ul li a {
     margin-right: 50px;
     margin-left: 50px;
     font-family: 'Poppins', sans-serif;
-    color: blue; /* Adjust text color */
+    color: rgb(0,38,118); /* Adjust text color */
     font-weight: bold; /* Make the text stand out */
     font-size: 75px;
     margin-bottom: 10px;
@@ -145,13 +152,13 @@ header.sticky ul li a {
     background: white;
     font-size: 3em;
     text-decoration: none;
-    color: blue;
+    color: rgb(0,38,118);
     font-style: italic;
-    border: 2px solid blue;
+    border: 4px solid rgb(0,38,118);
     border-radius: 15px;
 }
 .roster-button:hover {
-    background: blue;
+    background: rgb(0,38,118);
     font-size: 3em;
     text-decoration: none;
     color: white;
@@ -159,7 +166,7 @@ header.sticky ul li a {
 .Stream {
     background: black;
     width: 100%;
-    margin: 10rem auto;
+    margin: 0 auto;
 }
 .boxStream {
     display: flex;
@@ -180,4 +187,60 @@ header.sticky ul li a {
     margin: 125px 0px 125px 0px;
     border-top-left-radius: 150px;
     border-bottom-left-radius: 150px;
+}
+.StreamContainer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.StreamingOverlay {
+    background: black;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    font-family: 'Poppins', sans-serif;
+    color: white; /* Adjust text color */
+    font-weight: bold; /* Make the text stand out */
+    font-size: 75px;
+    margin-bottom: 10px;
+    font-style: italic;
+    text-align: center;
+}
+.logoContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.StreamCal {
+    flex-basis: 50%;
+}
+.Blackdog {
+    flex-basis: 50%;
+}
+.StreamCal img {
+    width: 90%;
+    margin-left: 20px;
+    height: auto;
+}
+.Blackdog img {
+    width: 82%;
+    height: auto;
+}
+.streaming-button {
+    margin-top: 10px;
+    background: black;
+    font-size: 3em;
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+    border: 4px solid white;
+    border-radius: 15px;
+}
+.streaming-button:hover {
+    background: white;
+    font-size: 3em;
+    text-decoration: none;
+    color: black;
 }
