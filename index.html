@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="images/calicehockeylogo2.png" alt="California"></a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Schedule</a></li>
+            <li><a href="#">Roster</a></li>
+            <li><a href="#">Staff</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Recruits</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </header>
+    <section class="banner">
+        <video id="background-video" autoplay loop muted poster="Snapinsta.app_video_EB41B9AC5B2358862C72E4796B4DB7AD_video_dashinit.mp4">
+            <source src="Snapinsta.app_video_EB41B9AC5B2358862C72E4796B4DB7AD_video_dashinit.mp4" type="video/mp4">
+          </video>
+    </section class="MeetTheBears">
+        <div class="boxMTB">
+            <div class="leftMTB">
+                <img src="images/CAL VS. EW HOCKEY-007.jpg" alt="Cal Ice Hockey Pregame Lineup">
+            </div>
+            <div class="rightMTB">
+                <div class="roster-button-container">
+                    <p class="MTBOverlay">Meet The Bears</p>
+                    <a href="#" class="roster-button">View The Roster</a>
+                </div>
+            </div>
+        </div>
+    <section>
+    <section class="Stream">
+        <div class="boxStream">
+            <div class="leftStream">
+            </div>
+            <div class="rightStream">
+                <img src="images/CAL VS. EW HOCKEY-027.jpg" alt="Cal Ice Hockey Celebration Photo">
+            </div>
+        </div>
+    </section>
+    </section>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
+</body>
+</html>
