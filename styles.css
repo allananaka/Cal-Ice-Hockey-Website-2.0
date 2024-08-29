@@ -253,3 +253,134 @@ header.sticky ul li a {
     width: 100%;
     background: rgb(4,30,66);
 }
+.socialmediacontainer {
+    margin-left: 70%;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    top: 50px;
+    position: relative;
+}
+.FollowUs {
+    font-family: "Spectral", serif;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 10px;
+    color: white;
+    font-size: 2em;
+}
+.socialmediacontainer div a img {
+    max-width: 50px;
+    width: 90%;
+    margin-left: 20px;
+    height: auto;
+}
+.white {
+    font-family: "Poppins", sans-serif;
+    background: rgb(214, 214, 214);
+    background-image: url(images/CAL\ VS.\ EW\ HOCKEY-027.jpg);
+    background-repeat: no-repeat;
+    height: 1000px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+.timeline {
+    box-sizing: border-box;
+    position: relative;
+    max-width: 1200px;
+    margin: 200px auto;
+
+}
+.timelineContainer {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+}
+.textbox {
+    color: rgb(91, 91, 91);
+    padding-left: 30px;
+    padding: 20px, 30px;
+    background: white;
+    position: relative;
+    border-radius: 6px;
+    font-size: 22px;
+    -moz-box-shadow: 0 0 8px #ccc;
+    -webkit-box-shadow: 0 0 8px #ccc;
+    box-shadow: 0 0 8px #ccc;
+    margin-bottom: 100px;
+}
+.timelineLeft-container {
+    left: 0;
+}
+.timelineRight-container {
+    left: 50%;
+}
+.timelineContainer img {
+    position: absolute;
+    width: 60px;
+    right: -30px;
+    top: 10%;
+    z-index: 10;
+}
+.timelineRight-container img{
+    left: -20px;
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: white;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    -moz-box-shadow: 0 0 8px #ccc;
+    -webkit-box-shadow: 0 0 8px #ccc;
+    box-shadow: 0 0 8px #ccc;
+}
+.blackText {
+    color: black;
+}
+.textbox h2 {
+    font-weight: 600;
+}
+.textbox small {
+    display: inline-block;
+    margin-bottom: 15
+}
+.left-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid rgb(4,30,66);
+    right: -15px;
+}
+.right-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid rgb(4,30,66);
+    left: -15px;
+}
+.textbox a {
+    text-decoration: none;
+}
+.textbox a:visited {
+    color: rgb(91, 91, 91);
+}
+.textbox a:hover {
+    color: white;
+    border-radius: 3px;
+    background: rgb(91, 91, 91);
+}
