@@ -6,7 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    min-height: 200vh;
+    min-height: 100vh;
 }
 header {
     position: fixed;
@@ -253,6 +253,13 @@ header.sticky ul li a {
     width: 100%;
     background: rgb(4,30,66);
 }
+.adjustForParallax {
+    height: 150px;
+    width: 100%;
+    background: rgb(4,30,66);
+    position: relative;
+    top: -0px;
+}
 .socialmediacontainer {
     margin-left: 70%;
     text-align: right;
@@ -277,13 +284,6 @@ header.sticky ul li a {
 }
 .white {
     font-family: "Poppins", sans-serif;
-    background: rgb(214, 214, 214);
-    background-image: url(images/CAL\ VS.\ EW\ HOCKEY-027.jpg);
-    background-repeat: no-repeat;
-    height: 1000px;
-    width: 100%;
-    margin: 0;
-    padding: 0;
 
 }
 .timeline {
@@ -345,11 +345,26 @@ header.sticky ul li a {
     color: black;
 }
 .textbox h2 {
+    position: relative;
+    top: 5px;
     font-weight: 600;
 }
-.textbox small {
+.textbox h4 {
+    position: relative;
+    top: 5px;
     display: inline-block;
-    margin-bottom: 15
+    margin-bottom: 5px;
+}
+.textbox p {
+    position: relative;
+    top: 5px;
+    margin-bottom: 5px;
+}
+.textbox a {
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 .left-container-arrow {
     height: 0;
@@ -383,4 +398,22 @@ header.sticky ul li a {
     color: white;
     border-radius: 3px;
     background: rgb(91, 91, 91);
+}
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+    background: rgb(4,30,66);
+}
+.parallaxbackground {
+    position: absolute;
+    width: 100%;
+    top: 900px;
+    left: 0;
+    object-fit: cover;
+    transform: translateZ(-20px) scale(4);
+}
+.test {
+    width: 100%;
 }
