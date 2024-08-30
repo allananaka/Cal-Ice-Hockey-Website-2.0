@@ -417,3 +417,80 @@ header.sticky ul li a {
 .test {
     width: 100%;
 }
+
+@media (min-device-width:320px) and (max-device-width:768px) {
+    .parallaxbackground {
+        position: absolute;
+        width: 100%;
+        top: 900px;
+        left: 0;
+        object-fit: cover;
+        transform: translateZ(-100px) scale(26);
+    }
+    .timelineContainer {
+        padding: 10px 50px;
+        position: relative;
+        width: 90%;
+
+    }
+    .timelineRight-container {
+        left: 0%;
+    }
+    .right-container-arrow {
+        height: 0;
+        width: 0;
+        position: absolute;
+        top: 28px;
+        z-index: 1;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid rgb(4,30,66);
+        border-right: 0px;
+        right: -15px;
+        left: 250px;
+    }
+    .timelineRight-container img{
+        left: 325px;
+    }
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 100%;
+        background: white;
+        top: 0;
+        left: 90%;
+        margin-left: -3px;
+        z-index: -1;
+        -moz-box-shadow: 0 0 8px #ccc;
+        -webkit-box-shadow: 0 0 8px #ccc;
+        box-shadow: 0 0 8px #ccc;
+    }
+    .socialmediacontainer {
+        margin-left: 5%;
+        text-align: right;
+        display: flex;
+        flex-direction: row;
+        top: 50px;
+        position: relative;
+    }
+    .boxMTB {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .boxStream {
+        display: flex;
+        flex-direction: column;
+    }
+    header ul li a {
+        position: relative;
+        margin: 0 5px;
+        text-decoration: none;
+        color: #fff;
+        letter-spacing: 2px;
+        font-weight: 500px;
+        transition: 0.6s;
+        font-size: x-small;
+        left: -60px;
+    }
+}
