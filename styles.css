@@ -780,7 +780,7 @@ section .content{
         width: 250px;
         height: 100px;
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: row;
         padding: 0;
         justify-content: flex-start;
     }
@@ -791,7 +791,7 @@ section .content{
     }
     .content {
         position: relative;
-        top: 80px;
+        top: 0px;
     }
     .greyline {
         border: none; 
@@ -800,11 +800,50 @@ section .content{
         margin: 20px 0; 
         width: 70%;
         margin: 5px auto;
-        top: -75px;
+        top: 0px;
         position: relative;
     }
     .content h2 {
         width: 100%;
         font-size: large;
+    }
+    .rosterBody {
+        height: auto;
+        min-height: 100vh;
+    }
+    .rosterContainer {
+        max-width: 90%;
+        padding: 20px 10px;
+        left: 0;
+    }
+    .gap {
+        height: 100px;
+    }
+    .rightSide {
+        position: relative;
+        flex-direction: column;
+        margin-left: 25px;
+    }
+    .leftbio {
+        margin-right: 15px;
+    }
+    .coachSlot {
+        flex-direction: row;
+        height: 150px;
+        width: 300px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .coachSlot .rightSide {
+        margin-bottom: 0px;
+        margin-top: 15px;
+        position: relative;
+        left: -15px;
+    }
+    .coachSlot .leftSide {
+        margin-left: 0px;
+        padding: 0;
+        position: relative;
+        left: -10px;
     }
 }
