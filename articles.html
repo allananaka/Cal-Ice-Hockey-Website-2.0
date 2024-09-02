@@ -8,10 +8,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body class="articlesBody">
+    <header>
+        <a href="#" class="logo"><img src="images/calicehockeylogo2.png" alt="California"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="roster.html">Roster</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="#">Recruits</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </header>
+    <section class="banner articlesBanner">
+        <video id="background-video" autoplay loop muted poster="images/Cal Ice Hockey Post Season Hype.mov">
+            <source src="images/Cal Ice Hockey Post Season Hype.mov" type="video/mp4">
+          </video>
+    </section>
     <section class="articles">
         <div class="articlesHeading">
-            <span>Recent Articles</span>
-            <h2>Articles</h2>
         </div>
         <div class="articlesContainer">
             <div class="articleThumbnail">
@@ -47,7 +63,46 @@
                     <a href="#">Read More</a>
                 </div>
             </div>
+            <div class="articleThumbnail">
+                <div class="articleImg">
+                    <img src="images/CAL VS. EW HOCKEY-007.jpg" alt="">
+                </div>
+                <div class="articleText">
+                    <span>18 June 2024</span>
+                    <a href="#" class="articleTitle">Look at what Cal Ice Hockey Has Done!</a>
+                    <p>So basically this is jsut a test for thw athe articles are going to say, this will be the intro into what people will read and so on...</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="articleThumbnail">
+                <div class="articleImg">
+                    <img src="images/CAL VS. EW HOCKEY-007.jpg" alt="">
+                </div>
+                <div class="articleText">
+                    <span>18 June 2024</span>
+                    <a href="#" class="articleTitle">Look at what Cal Ice Hockey Has Done!</a>
+                    <p>So basically this is jsut a test for thw athe articles are going to say, this will be the intro into what people will read and so on...</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="articleThumbnail">
+                <div class="articleImg">
+                    <img src="images/CAL VS. EW HOCKEY-007.jpg" alt="">
+                </div>
+                <div class="articleText">
+                    <span>18 June 2024</span>
+                    <a href="#" class="articleTitle">Look at what Cal Ice Hockey Has Done!</a>
+                    <p>So basically this is jsut a test for thw athe articles are going to say, this will be the intro into what people will read and so on...</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
         </div>
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            })
+        </script>
     </section>
     
 </body>
