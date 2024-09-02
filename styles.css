@@ -69,6 +69,9 @@ header ul li a {
     background-size: cover;
     overflow: hidden;
 }
+.articlesBanner {
+    height: 70vh;
+}
 header.sticky .logo,
 header.sticky ul li a {
     color: #000;
@@ -670,7 +673,157 @@ section .content{
 .coachSlot .bio {
     flex-direction: column;
 }
+.rosterHeader {
+    background:white;
+    height: 150px;
+}
+.rosterHeader ul li a {
+    color: #000;
+}
+.articlesBody {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.articlesBody a {
+    text-decoration: none;
+}
+.articlesBody ul {
+    list-style: none;
+}
+.articlesBody {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
 
+.articles {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.articlesHeading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.articlesHeading span {
+    color:#002676;
+}
+.articlesHeading h1 {
+    font-size: 36px;
+    color:#002676;
+    font-weight: 600;
+}
+.articlesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+}
+.articleThumbnail {
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid #ececec;
+    margin: 20px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+
+}
+.articleImg {
+    width: 100%;
+    height: auto;
+}
+.articleImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.articleText {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.articleText span {
+    color:#002676;
+    font-size: 18px;
+}
+.articleTitle {
+    font-size: 25px;
+    font-weight: 500;
+    color: #000;
+}
+.articleTitle:hover {
+    font-size: 25px;
+    font-weight: 500;
+    color: #FDB515;
+}
+.articleText p{
+    color: #9b9b9b;
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+.articleText a{
+    color: #000;
+}
+.articleText a:hover{
+    color: #FDB515;
+}
+.blogBody {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(images/LCHI6246.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 80vw;
+    height: 150vh;
+    height: 20px solid #fff;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+}
+.blog {
+    margin-bottom: 20px;
+}
+.date {
+    color: #fff;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.blogBody h2 {
+    margin: 20px 0px 20px;
+    color: #fff;
+}
+.paragraph {
+    border-left: 5px solid #004AAE;
+    padding-left: 5px;
+    color: #fff;
+}
+@media(max-width:1250px){
+    .articleThumbnail {
+        width: 300px;
+    }
+}
+@media(max-width:1100) {
+    .articleThumbnail {
+        width: 70%;
+    }
+}
 @media (min-device-width:320px) and (max-device-width:768px) {
     .parallaxbackground {
         position: absolute;
@@ -846,107 +999,4 @@ section .content{
         position: relative;
         left: -10px;
     }
-}
-.rosterHeader {
-    background:white;
-    height: 150px;
-}
-.rosterHeader ul li a {
-    color: #000;
-}
-.articlesBody {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-.articlesBody a {
-    text-decoration: none;
-}
-.articlesBody ul {
-    list-style: none;
-}
-.articlesBody {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
-.articles {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 40px;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-.articlesHeading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.articlesHeading span {
-    color:#002676;
-}
-.articlesHeading h2 {
-    font-size: 24px;
-    color:#002676;
-    font-weight: 600;
-}
-.articlesContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0px;
-    flex-wrap: wrap;
-}
-.articleThumbnail {
-    width: 350px;
-    background-color: #fff;
-    border: 1px solid #ececec;
-    margin: 20px;
-}
-.articleImg {
-    width: 100%;
-    height: auto;
-}
-.articleImg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-.articleText {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-}
-.articleText span {
-    color:#002676;
-    font-size: 18px;
-}
-.articleTitle {
-    font-size: 25px;
-    font-weight: 500;
-    color: #000;
-}
-.articleTitle:hover {
-    font-size: 25px;
-    font-weight: 500;
-    color: #002676;
-}
-.articleText p{
-    color: #9b9b9b;
-    font-size: 16px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 20px 0px;
-}
-.articleText a{
-    color: #000;
-}
-.articleText a:hover{
-    color: #002676;
 }
