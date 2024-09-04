@@ -256,6 +256,13 @@ header.sticky ul li a {
     width: 100%;
     background: rgb(4,30,66);
 }
+.articlePageBottom {
+    align-items: flex-start;
+    position: absolute;
+    width: 150%;
+    left: -450px;
+    margin-bottom: 50px;
+}
 .adjustForParallax {
     height: 150px;
     width: 100%;
@@ -661,7 +668,7 @@ section .content{
     height: 150px;
     width: 100%;
     align-items: flex-start;
-    background-color:#002676;
+    background-color:rgb(4,30,66);
     margin-top: 100px;
 }
 .coachSlot h4 {
@@ -763,9 +770,19 @@ section .content{
     font-weight: 500;
     color: #000;
 }
+.longTitle {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+}
 .articleTitle:hover {
     font-size: 25px;
     font-weight: 500;
+    color: #FDB515;
+}
+.longTitle:hover {
+    font-size: 15px;
+    font-weight: 600;
     color: #FDB515;
 }
 .articleText p{
@@ -796,10 +813,10 @@ section .content{
     padding: 20px;
     margin: 20px auto;
     max-width: 700px;
-    margin-top: 50px;
+    margin-top: 150px;
 }
 .blog {
-    margin-bottom: 20px;
+    margin-bottom: 100px;
 }
 .date {
     color: #fff;
