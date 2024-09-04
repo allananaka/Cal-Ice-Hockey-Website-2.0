@@ -322,13 +322,15 @@ header.sticky ul li a {
 }
 .timelineContainer img {
     position: absolute;
-    width: 60px;
-    right: -30px;
+    width: 70px;
+    max-width: 120px;
+    max-height: 100px;
+    right: -35px;
     top: 10%;
     z-index: 10;
 }
 .timelineRight-container img{
-    left: -20px;
+    left: -35px;
 }
 .timeline::after {
     content: '';
@@ -412,10 +414,10 @@ header.sticky ul li a {
 .parallaxbackground {
     position: absolute;
     width: 100%;
-    top: 900px;
+    top: 1500px;
     left: 0;
     object-fit: cover;
-    transform: translateZ(-20px) scale(4);
+    transform: translateZ(-60px) scale(7.4);
 }
 .test {
     width: 100%;
