@@ -858,7 +858,7 @@ section .content{
         top: 900px;
         left: 0;
         object-fit: cover;
-        transform: translateZ(-100px) scale(26);
+        transform: translateZ(-200px) scale(42);
     }
     .timelineContainer {
         padding: 10px 50px;
@@ -1025,5 +1025,12 @@ section .content{
         padding: 0;
         position: relative;
         left: -10px;
+    }
+    .articlePageBottom {
+        align-items: flex-start;
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        margin-bottom: 50px;
     }
 }
