@@ -617,6 +617,8 @@ section .content{
 .leftSide img {
     height: 110%;
     width: auto;
+    object-fit: cover;
+    min-width: 120px;
     border-radius: 50%;
 }
 .coachesContent .leftSide img,
