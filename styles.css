@@ -955,10 +955,12 @@ section .content{
         transition: all 0.3s ease;
     }
     .rosterSlot {
+        position: relative;
+        left: -20px;
         margin: 15px;
         margin-top: 40px;
         margin-bottom: 80px;
-        margin-left: 10px;
+        margin-left: 0px;
         width: 250px;
         height: 100px;
         display: flex;
@@ -966,10 +968,14 @@ section .content{
         padding: 0;
         justify-content: flex-start;
     }
+    .coachSlot {
+        left: 0px;
+    }
     .leftSide img {
-        height: 100px;
-        width: auto;
+        height: 120px;
+        width: 100px;
         margin-top: 10px;
+        object-fit: cover;
     }
     .content {
         position: relative;
@@ -1034,5 +1040,8 @@ section .content{
         width: 100%;
         left: 0px;
         margin-bottom: 50px;
+    }
+    .coachSlot h5 {
+        font-size: 10px;;
     }
 }
