@@ -805,7 +805,7 @@ section .content{
     color: #FDB515;
 }
 .blogBody {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(images/LCHI6246.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(LCHI6246.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
