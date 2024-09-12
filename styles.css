@@ -202,8 +202,6 @@ header.sticky ul li a {
 .StreamingOverlay {
     background: white;
     margin-top: 50px;
-    margin-right: 50px;
-    margin-left: 50px;
     font-family: "Spectral", serif;
     font-weight: 500;
     font-style: italic;
@@ -662,7 +660,7 @@ section .content{
     height: 3px; 
     background-color:#002676;
     margin: 20px 0; 
-    width: 70%;
+    width: 50%;
     margin: 5px auto;
 }
 .coachContainer .greyline {
@@ -675,6 +673,12 @@ section .content{
     align-items: flex-start;
     background-color:rgb(4,30,66);
     margin-top: 100px;
+}
+.homeBottom .socialmediacontainer{
+    margin-right: 0px;
+    padding-right: 0px;
+    position: relative;
+    left: 0px;
 }
 .coachSlot h4 {
     margin-top: 10px;
@@ -845,7 +849,17 @@ section .content{
     font-weight: 300;
     margin-top: 8px;
 }
-
+.mobileContainer {
+    width: 100vw;
+}
+.rosterSlot {
+    max-width: 100vw;
+    position: relative;
+    left: 225px;
+}
+.gap {
+    width: 100vw;
+}
 @media(max-width:1250px){
     .articleThumbnail {
         width: 300px;
@@ -857,6 +871,13 @@ section .content{
     }
 }
 @media (min-device-width:320px) and (max-device-width:768px) {
+    .body {
+        overflow-x: hidden;
+    }
+    .header {
+        max-width: 100vw;
+        padding: 0%;
+    }
     .parallaxbackground {
         position: absolute;
         width: 100%;
@@ -869,7 +890,6 @@ section .content{
         padding: 10px 50px;
         position: relative;
         width: 90%;
-
     }
     .timelineRight-container {
         left: 0%;
@@ -943,6 +963,11 @@ section .content{
         box-shadow: 0 0 8px rgba(0,0,0,0.2);
         position: relative;
         left: 350px;
+        flex-shrink: 1;
+        padding-right: 0px;
+        margin-right: 0px;
+        max-width: 100vw;
+        font-size: 12px;
     }
     .rosterContainer nav label {
         position: relative;
@@ -955,15 +980,16 @@ section .content{
         font-size: 13px;
         font-weight: 600;
         transition: all 0.3s ease;
+        max-width: 100vw;
     }
     .rosterSlot {
         position: relative;
-        left: -20px;
+        left: 50px;
         margin: 15px;
         margin-top: 40px;
         margin-bottom: 80px;
         margin-left: 0px;
-        width: 250px;
+        width: 280px;
         height: 100px;
         display: flex;
         flex-direction: row;
@@ -971,7 +997,7 @@ section .content{
         justify-content: flex-start;
     }
     .coachSlot {
-        left: 0px;
+        left: 10px;
     }
     .leftSide img {
         height: 120px;
@@ -1045,5 +1071,59 @@ section .content{
     }
     .coachSlot h5 {
         font-size: 10px;;
+    }
+    .homeBottom .socialmediacontainer{
+        left: 0px;
+    }
+    .boxMTB {
+        margin-top: 40px;
+    }
+    .streaming-button {
+        width: 60%;
+        text-align: center;
+    }
+    .leftMTB img{
+        margin-bottom: 20px;
+        margin-top: 20px;
+        border-radius: 0px;
+    }
+    .rightMTB {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    .StreamContainer {
+        margin-top: 0px;
+    }
+    .rightStream img {
+        margin-top: 50px;
+        margin-bottom: 0px;
+        border-radius: 0px;
+    }
+    .MTBOverlay {
+        font-size: 50px;
+    }
+    .roster-button {
+        font-size: 50px;
+    }
+    .StreamingOverlay {
+        font-size: 50px;
+    }
+    .streaming-button {
+        font-size: 30px;
+    }
+    .StreamCal img {
+        width: 80%;
+        margin-left: 35px;
+        height: auto;
+        margin-top: 0px;
+    }
+    .Blackdog img {
+        width: 80%;
+        height: auto;
+        margin-top: 0px;
+        position: relative;
+        top: -10px;
+        left: 10px;
     }
 }
