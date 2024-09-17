@@ -864,7 +864,7 @@ section .content{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 700px;
+    min-height: 600px;
     height: auto;
     padding: 20px; 
     box-sizing: border-box;
@@ -872,7 +872,7 @@ section .content{
 iframe {
     width: 80vw;
     height: 600px;
-    min-height: 500px;
+    min-height: 300px;
     max-height: 1500px;
 }
 .styled-calendar-container {
