@@ -583,6 +583,15 @@ section .content{
     padding: 0;
     justify-content: flex-start;
 }
+.coachesContent,
+.staffContent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: relative;
+    left: -215px;
+}
 .coachSlot {
     margin-left: 0px;
     margin-right: 0px;
@@ -594,6 +603,8 @@ section .content{
     height: 150px;
     padding: 20px;
     box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    position: relative;
+    left: 800px;
 }
 .leftSide {
     max-width: 150px;
@@ -1145,5 +1156,9 @@ iframe {
         position: relative;
         top: -10px;
         left: 10px;
+    }
+    .coachesContent,
+    .staffContent {
+        left: 0px;
     }
 }
