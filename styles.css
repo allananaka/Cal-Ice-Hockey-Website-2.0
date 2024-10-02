@@ -627,8 +627,8 @@ section .content{
     flex-basis: 60%;
 }
 .leftSide img {
-    height: 110%;
-    width: auto;
+    height: 130px;
+    width: 130px;
     object-fit: cover;
     min-width: 120px;
     border-radius: 50%;
