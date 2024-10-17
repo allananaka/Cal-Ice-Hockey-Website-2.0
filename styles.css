@@ -266,7 +266,8 @@ header.sticky ul li a {
     width: 100%;
     background: rgb(4,30,66);
     position: relative;
-    top: 100px;
+    top: 0px;
+    transform: translateZ(-60px) scale(7.4);
 }
 .socialmediacontainer {
     margin-left: 70%;
