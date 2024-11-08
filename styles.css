@@ -576,7 +576,7 @@ section .content{
     margin: 15px;
     margin-top: 40px;
     margin-bottom: 40px;
-    margin-left: 200px;
+    margin-left: 15vw;
     width: 800px;
     height: 100px;
     display: flex;
@@ -823,7 +823,7 @@ section .content{
     color: #FDB515;
 }
 .blogBody {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(LCHI6246.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(images/LCHI6246.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
