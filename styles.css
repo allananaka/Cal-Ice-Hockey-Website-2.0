@@ -266,7 +266,7 @@ header.sticky ul li a {
     width: 100%;
     background: rgb(4,30,66);
     position: relative;
-    top: 0px;
+    top: 400px;
     transform: translateZ(-60px) scale(7.4);
 }
 .socialmediacontainer {
@@ -976,7 +976,7 @@ iframe {
         margin: 0 5px;
         text-decoration: none;
         color: #fff;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         font-weight: 500px;
         transition: 0.6s;
         font-size: x-small;
