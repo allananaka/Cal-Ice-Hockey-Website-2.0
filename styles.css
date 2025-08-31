@@ -425,7 +425,7 @@ header.sticky ul li a {
     top: 1500px;
     left: 0;
     object-fit: cover;
-    transform: translateZ(-60px) scale(7.4);
+    transform: translateZ(-70px) scale(8);
     z-index: -2;
 }
 .test {
