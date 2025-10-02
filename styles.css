@@ -62,6 +62,47 @@ header ul li a {
     font-weight: 500px;
     transition: 0.6s;
 }
+/* Container for dropdown */
+header ul li.dropdown {
+    position: relative;
+}
+
+/* Hidden menu initially */
+header ul li .dropdown-menu {
+    position: absolute;
+    top: 100%; /* places below the parent */
+    left: 0;
+    display: none;
+    flex-direction: column;
+    min-width: 150px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Show menu on hover */
+header ul li.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+/* Dropdown links */
+header ul li .dropdown-menu li {
+    list-style: none;
+    width: 100%;
+}
+
+header ul li .dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+header ul li .dropdown-menu li a:hover {
+    background: #fff;
+    color: #000;
+}
+
 .banner {
     position: relative;
     width: 100%;
@@ -1039,8 +1080,8 @@ iframe {
         letter-spacing: 1px;
         font-weight: 500px;
         transition: 0.6s;
-        font-size: x-small;
-        left: -60px;
+        font-size: xx-small;
+        left: -70px;
     }
     .rosterContainer {
         max-width: 300px;
