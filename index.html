@@ -12,43 +12,212 @@
     <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <a href="#" class="logo"><img src="images/calicehockeylogo2.png" alt="California"></a>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="roster.html">Roster</a></li>
-            <li><a href="staff.html">Staff</a></li>
-            <li><a href="articles.html">Articles</a></li>
-            <li><a href="https://forms.gle/nP5RbMVFuc2RLnWz9" target="_blank">Recruits</a></li>
-            <li><a href="https://forms.gle/iUhuvuu1Cd8nx1Cd6" target="_blank">Alumni</a></li>
-            <li class="dropdown">
-                <a>Team</a>
-                <ul class="dropdown-menu">
-                    <li><a href="login.php">Login</a></li>
-                    <li><a href="index.html">...</a></li>
-                </ul>
-            </li>
-        </ul>
-    </header>
-    <section class="banner">
-        <video id="background-video" autoplay loop muted poster="images/HomePageVideo.mp4">
-            <source src="images/HomePageVideo.mp4" type="video/mp4">
-          </video>
-    </section>
-    </section class="MeetTheBears">
-        <div class="boxMTB">
-            <div class="leftMTB">
-                <img src="images/MeetTheBearsBanner.jpg" alt="Cal Ice Hockey Pregame Lineup">
-            </div>
-            <div class="rightMTB">
-                <div class="roster-button-container">
-                    <mark class="MTBOverlay">Meet The Bears</mark>
-                    <a href="roster.html" class="roster-button">View The Roster</a>
-                </div>
-            </div>
+<header>
+    <a href="#" class="logo"><img src="images/calicehockeylogo2.png" alt="California"></a>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="roster.html">Roster</a></li>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="https://forms.gle/nP5RbMVFuc2RLnWz9" target="_blank">Recruits</a></li>
+        <li><a href="https://forms.gle/iUhuvuu1Cd8nx1Cd6" target="_blank">Alumni</a></li>
+        <li class="dropdown">
+            <a>Team</a>
+            <ul class="dropdown-menu">
+                <li><a href="login.php">Login</a></li>
+                <li><a href="index.html">...</a></li>
+            </ul>
+        </li>
+    </ul>
+</header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cal Hockey Popup</title>
+    <style>
+        :root{
+          --berkeley-blue:#003262;
+          --cal-gold:#FDB515;
+          --ink:#0b0b0c;
+          --card-bg: rgba(255,255,255,0.92);
+        }
+        *,*:before,*:after{ box-sizing: border-box; }
+
+        /* Page demo styles (remove if you already have these) */
+        body{ margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+
+        /* Overlay */
+        .popup-overlay{
+          position:fixed; inset:0;
+          display:none; /* shown via JS */
+          place-items:center;
+          background: rgba(0,0,0,.55);
+          backdrop-filter: blur(4px);
+          -webkit-backdrop-filter: blur(4px);
+          z-index: 9999;
+        }
+
+        /* Card */
+        .popup{
+          position:relative;
+          width:min(92vw, 520px);
+          border-radius:18px;
+          background: var(--card-bg);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          box-shadow: 0 18px 60px rgba(0,0,0,.3);
+          padding: 28px 28px 24px;
+          text-align:center;
+          transform: translateY(8px);
+          opacity: 0;
+          animation: popup-in .35s ease forwards;
+        }
+
+        /* Close button */
+        .popup__close{
+          position:absolute; top:10px; right:10px;
+          display:inline-grid; place-items:center;
+          width:36px; height:36px;
+          border:none; border-radius:9px;
+          background: rgba(0,0,0,.06);
+          cursor:pointer;
+          font-size:20px; line-height:1; color:#333;
+          transition: transform .12s ease, background .2s ease;
+        }
+        .popup__close:hover{ background: rgba(0,0,0,.12); transform: scale(1.04); }
+        .popup__close:focus-visible{ outline: 2px solid var(--berkeley-blue); outline-offset: 2px; }
+
+        .popup h2{
+          margin: 8px 0 6px;
+          font-size: clamp(20px, 3.2vw, 26px);
+          color: var(--ink);
+          font-weight: 800;
+          letter-spacing:.2px;
+        }
+        .popup p{
+          margin: 0 0 18px;
+          color:#444; font-size: 15px;
+        }
+
+        /* CTA buttons */
+        .btn-row{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+        .btn{
+          appearance:none; border:none; cursor:pointer;
+          padding: 12px 18px; border-radius:12px;
+          font-weight: 700; letter-spacing:.2px; text-decoration:none; display:inline-block;
+          transition: transform .15s ease, box-shadow .2s ease;
+        }
+        .btn--primary{
+          color:#fff; background: var(--berkeley-blue);
+          box-shadow: 0 6px 18px rgba(0,50,98,.35);
+        }
+        .btn--primary:hover{ transform: translateY(-1px); box-shadow: 0 10px 24px rgba(0,50,98,.45); }
+        .btn--ghost{
+          background: transparent; color:#111; border:1.5px solid rgba(0,0,0,.12);
+        }
+        .btn--ghost:hover{ transform: translateY(-1px); }
+
+        /* Motion prefs */
+        @media (prefers-reduced-motion: reduce){
+          .popup{ animation:none; }
+          .btn, .popup__close{ transition:none; }
+        }
+        @keyframes popup-in{
+          from{ transform: translateY(14px) scale(.98); opacity:0; }
+          to{ transform: translateY(0) scale(1); opacity:1; }
+        }
+    </style>
+</head>
+<div id="cal-popup-overlay" class="popup-overlay" aria-hidden="true">
+    <div id="cal-popup" class="popup" role="dialog" aria-modal="true" aria-labelledby="cal-popup-title" aria-describedby="cal-popup-desc" tabindex="-1">
+        <button class="popup__close" id="cal-popup-close" aria-label="Close popup">×</button>
+
+        <!-- Optional logo -->
+        <!-- <img src="/images/cal-hockey-logo.svg" alt="California Ice Hockey" style="width:90px; margin:6px auto 10px; display:block;"> -->
+
+        <h2 id="cal-popup-title">Our Crowdfund is now open!</h2>
+        <p id="cal-popup-desc">Every gift helps our student-athletes. Thank you for your support.</p>
+
+        <div class="btn-row">
+            <a class="btn btn--primary" id="cal-popup-cta" href="https://crowdfund.berkeley.edu/project/47868" target="_blank" rel="noopener">Donate Now</a>
+            <button class="btn btn--ghost" id="cal-popup-dismiss" type="button">Maybe Later</button>
         </div>
-    <section>
+    </div>
+</div>
+
+<!-- Your page content here -->
+
+<script>
+    (function(){
+      const overlay = document.getElementById('cal-popup-overlay');
+      const dialog  = document.getElementById('cal-popup');
+      const closeBtn = document.getElementById('cal-popup-close');
+      const dismissBtn = document.getElementById('cal-popup-dismiss');
+
+      const SHOW_ONCE_PER_SESSION = false;   // <-- set to false to show every page load
+      const STORAGE_KEY = 'calPopupShown';
+
+      function openPopup(){
+        overlay.style.display = 'grid';
+        overlay.removeAttribute('aria-hidden');
+        // lock scroll
+        document.documentElement.style.overflow = 'hidden';
+        // focus into dialog for a11y
+        dialog.focus();
+        // simple focus trap
+        document.addEventListener('keydown', trapTab);
+      }
+
+      function closePopup(){
+        overlay.style.display = 'none';
+        overlay.setAttribute('aria-hidden','true');
+        document.documentElement.style.overflow = ''; // unlock scroll
+        document.removeEventListener('keydown', trapTab);
+      }
+
+      function trapTab(e){
+        if(e.key === 'Escape'){ closePopup(); }
+        if(e.key !== 'Tab') return;
+        // keep focus inside dialog
+        const focusables = dialog.querySelectorAll('a[href],button:not([disabled])');
+        const first = focusables[0], last = focusables[focusables.length-1];
+        if(!first || !last) return;
+        if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+        else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+      }
+
+      // open on load (optionally once per session)
+      window.addEventListener('load', () => {
+        if (SHOW_ONCE_PER_SESSION && sessionStorage.getItem(STORAGE_KEY)) return;
+        if (SHOW_ONCE_PER_SESSION) sessionStorage.setItem(STORAGE_KEY, '1');
+        openPopup();
+      });
+
+      // close handlers
+      closeBtn.addEventListener('click', closePopup);
+      dismissBtn.addEventListener('click', closePopup);
+      overlay.addEventListener('click', (e)=>{ if(e.target === overlay) closePopup(); });
+    })();
+</script>
+<section class="banner">
+    <video id="background-video" autoplay loop muted poster="images/HomePageVideo.mp4">
+        <source src="images/HomePageVideo.mp4" type="video/mp4">
+    </video>
+</section>
+<section class="MeetTheBears">
+<div class="boxMTB">
+    <div class="leftMTB">
+        <img src="images/MeetTheBearsBanner.jpg" alt="Cal Ice Hockey Pregame Lineup">
+    </div>
+    <div class="rightMTB">
+        <div class="roster-button-container">
+            <mark class="MTBOverlay">Meet The Bears</mark>
+            <a href="roster.html" class="roster-button">View The Roster</a>
+        </div>
+    </div>
+</div>
+<section>
     <section class="Stream">
         <div class="boxStream">
             <div class="leftStream">
@@ -71,7 +240,7 @@
         </div>
     </section>
     <div class="calendarContainer">
-            <iframe src="https://embed.styledcalendar.com/#c4j9HaWSYeOTvNFYrSeK" title="Styled Calendar" class="styled-calendar-container" frameboarder="0" data-cy="calendar-embed-iframe"></iframe>
+        <iframe src="https://embed.styledcalendar.com/#c4j9HaWSYeOTvNFYrSeK" title="Styled Calendar" class="styled-calendar-container" frameboarder="0" data-cy="calendar-embed-iframe"></iframe>
         <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
     </div>
     <section class="bottom homeBottom">
@@ -88,6 +257,6 @@
             header.classList.toggle("sticky", window.scrollY > 0);
         })
     </script>
-    </section>
+</section>
 </body>
 </html>
