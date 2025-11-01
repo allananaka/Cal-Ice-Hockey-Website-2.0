@@ -65,7 +65,7 @@ if (isset($_GET['code'])) {
         ];
 
         // Redirect to a protected page
-        header("Location: /dashboard.php");
+        header("Location: /lines-builder.html");
         exit;
     } catch (Exception $e) {
         exit('Login failed: ' . $e->getMessage());
