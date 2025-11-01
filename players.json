@@ -1,0 +1,84 @@
+{
+  "players": [
+    {
+      "id": 1,
+      "name": "Alex Johnson",
+      "number": 14,
+      "position": "Forward",
+      "handedness": "Right",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop"
+    },
+    {
+      "id": 2,
+      "name": "Brandon Lee",
+      "number": 27,
+      "position": "Forward",
+      "handedness": "Left",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop"
+    },
+    {
+      "id": 3,
+      "name": "Chris Martinez",
+      "number": 9,
+      "position": "Forward",
+      "handedness": "Right",
+      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop"
+    },
+    {
+      "id": 4,
+      "name": "David Taylor",
+      "number": 19,
+      "position": "Forward",
+      "handedness": "Left",
+      "image": "https://images.unsplash.com/photo-1519631128182-7860232967b7?w=150&h=150&fit=crop"
+    },
+    {
+      "id": 5,
+      "name": "Emma Wilson",
+      "number": 23,
+      "position": "Forward",
+      "handedness": "Right",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
+    },
+    {
+      "id": 6,
+      "name": "Frank Anderson",
+      "number": 15,
+      "position": "Defense",
+      "handedness": "Left",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop"
+    },
+    {
+      "id": 7,
+      "name": "George Brown",
+      "number": 7,
+      "position": "Defense",
+      "handedness": "Right",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop"
+    },
+    {
+      "id": 8,
+      "name": "Henry Davis",
+      "number": 21,
+      "position": "Defense",
+      "handedness": "Left",
+      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop"
+    },
+    {
+      "id": 9,
+      "name": "Ivan Smith",
+      "number": 11,
+      "position": "Defense",
+      "handedness": "Right",
+      "image": "https://images.unsplash.com/photo-1519631128182-7860232967b7?w=150&h=150&fit=crop"
+    },
+    {
+      "id": 10,
+      "name": "Jack Miller",
+      "number": 24,
+      "position": "Forward",
+      "handedness": "Right",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
+    }
+  ]
+}
