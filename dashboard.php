@@ -1,6 +1,7 @@
 <?php
-require __DIR__ . '/../config.php';
 session_start();
+require __DIR__ . '/../config.php';
+
 
 // Check if user is signed in
 if (!isset($_SESSION['user'])) {
@@ -49,11 +50,10 @@ $name  = $_SESSION['user']['name'];
     <h1>Welcome, <?php echo htmlspecialchars($name); ?>!</h1>
     <p>You’re signed in as <strong><?php echo htmlspecialchars($email); ?></strong></p>
 
-    <!-- Display your team image -->
-    <img src="images/heinous 2.JPG" alt="Team Photo">
+    <img src="images/Article3Banner.png" alt="Team Photo">
 
     <div class="logout">
-        <a href="logout.php">Logout</a>
+        <a href="/lines-builder.php">Logout</a>
     </div>
 </body>
 </html>

@@ -50,8 +50,16 @@ if (isset($_GET['code'])) {
             "simonmantoani@berkeley.edu",
             "ckanas@berkeley.edu",
             "dom_sedlak-braude@berkeley.edu",
-            "n.tomic@berkeley.edu"
+            "n.tomic@berkeley.edu",
+            "Ajbubbsis@gmail.com"
         ];
+        $admin_emails = [
+            "allan.anaka@berkeley.edu",
+            "jason_lee@berkeley.edu"
+          ];
+
+        $admins = array_map(fn($e) => strtolower(trim($e)), $admin_emails);
+        $role = in_array($email, $admins, true) ? 'admin' : 'member';
         
         if (!in_array($email, array_map('strtolower', $allowed_emails))) {
             $_SESSION['user'] = ['email' => $email];
@@ -61,11 +69,13 @@ if (isset($_GET['code'])) {
         // Store user info in session
         $_SESSION['user'] = [
             'email' => $ownerDetails->getEmail(),
-            'name'  => $ownerDetails->getName()
+            'name'  => $ownerDetails->getName(),
+            'role'  => $role,
+            'can_build_lines' => ($role === 'admin')
         ];
 
         // Redirect to a protected page
-        header("Location: /lines-builder.html");
+        header("Location: /lines-builder.php");
         exit;
     } catch (Exception $e) {
         exit('Login failed: ' . $e->getMessage());
