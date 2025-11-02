@@ -403,20 +403,19 @@ $canEdit = !empty($_SESSION['user']['can_build_lines']);
 </head>
 <body class="linesBuilderPage">
     <header>
-        <a href="index.html" class="logo"><img src="images/calicehockeylogo2.png" alt="California"></a>
+        <a href="#" class="logo"><img src="images/calicehockeylogo2.png" alt="California"></a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="schedule.html">Schedule</a></li>
             <li><a href="roster.html">Roster</a></li>
             <li><a href="staff.html">Staff</a></li>
             <li><a href="articles.html">Articles</a></li>
-            <li><a href="https://forms.gle/nP5RbMVFuc2RLnWz9" target="_blank">Recruits</a></li>
-            <li><a href="https://forms.gle/iUhuvuu1Cd8nx1Cd6" target="_blank">Alumni</a></li>
             <li class="dropdown">
-                <a>Team</a>
+                <a href="login.php">Team</a>
                 <ul class="dropdown-menu">
                     <li><a href="login.php">Login</a></li>
-                    <li><a href="lines-builder.html">Lines Builder</a></li>
+                    <li><a href="https://forms.gle/nP5RbMVFuc2RLnWz9" target="_blank">Recruits</a></li>
+                    <li><a href="https://forms.gle/iUhuvuu1Cd8nx1Cd6" target="_blank">Alumni</a></li>
                 </ul>
             </li>
         </ul>
