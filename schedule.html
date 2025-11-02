@@ -12,25 +12,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 </head>
 <body class="sched">
-        <header>
-            <a href="index.html" class="logo"><img src="images/calicehockeylogo2.png" alt="California"></a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Schedule</a></li>
-                <li><a href="roster.html">Roster</a></li>
-                <li><a href="staff.html">Staff</a></li>
-                <li><a href="articles.html">Articles</a></li>
-                <li><a href="https://forms.gle/nP5RbMVFuc2RLnWz9" target="_blank">Recruits</a></li>
-                <li><a href="https://forms.gle/iUhuvuu1Cd8nx1Cd6" target="_blank">Alumni</a></li>
-                <li class="dropdown">
-                    <a>Team</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="login.php">Login</a></li>
-                        <li><a href="index.html">...</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </header>
+    <header>
+        <a href="#" class="logo"><img src="images/calicehockeylogo2.png" alt="California"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="roster.html">Roster</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li class="dropdown">
+                <a href="login.php">Team</a>
+                <ul class="dropdown-menu">
+                    <li><a href="login.php">Login</a></li>
+                    <li><a href="https://forms.gle/nP5RbMVFuc2RLnWz9" target="_blank">Recruits</a></li>
+                    <li><a href="https://forms.gle/iUhuvuu1Cd8nx1Cd6" target="_blank">Alumni</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
         <script type="text/javascript">
             window.addEventListener("scroll", function(){
                 var header = document.querySelector("header");
@@ -345,5 +344,16 @@
                 <div><a href="https://x.com/Cal_IceHockey" target="_blank"><img src="images/x-social-media-white-round-icon.png" alt="X"></a></div>
             </section>
     </section>
+    <script>
+        document.addEventListener("click", function(e) {
+          const btn = e.target.closest(".dropdown-toggle");
+          document.querySelectorAll(".dropdown-menu").forEach(menu => menu.style.display = "none");
+        
+          if (btn) {
+            const menu = btn.parentElement.querySelector(".dropdown-menu");
+            if (menu) menu.style.display = "flex";
+          }
+        });
+        </script>
 </body>
 </html>

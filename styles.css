@@ -995,6 +995,39 @@ iframe {
     height: 1000px;
     width: 80vw;
 }
+.coachesContent,
+.staffContent {
+  position: static;      
+  left: 0;               
+  align-items: center;  
+}
+
+.coachSlot {
+  position: static;     
+  left: 0;           
+  margin-left: auto;    
+  margin-right: auto;
+  width: 800px;   
+  max-width: 90%;     
+}
+
+.coachesContent .leftSide img,
+.staffContent .leftSide img {
+  margin-left: 0;       
+}
+.rosterContainer .rosterSlot .greyline {
+    border: none;
+    height: 2px;
+    background-color: #002676;
+    margin: 8px 0;
+    width: 40%;
+  }
+  
+  /* Staff page divider (if/when you use greyline there) */
+  .coachContainer .rosterSlot .greyline {
+    width: 50%;
+  }
+  .greyline { all: unset; display: block; }
 @media(max-width:1250px){
     .articleThumbnail {
         width: 300px;
@@ -1306,3 +1339,327 @@ iframe {
         left: 0px;
     }
 }
+@media (max-width: 768px) {
+    .rosterSlot,
+    .coachSlot {
+      width: 95% !important;
+      margin: 0 auto;
+      flex-direction: column;
+      text-align: center;
+      padding: 15px;
+    }
+  
+    .leftSide img {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 10px auto !important;
+    }
+  
+    .rightSide {
+      width: 100%;
+      margin-top: 5px;
+    }
+  
+    .bio h4,
+    .bio h5,
+    .rightSide h2 {
+      text-align: center;
+    }
+  }
+  /* Consistent roster/staff internal divider */
+.greyline {
+    border: none;
+    height: 3px;
+    background-color: #002676;   /* same blue used on roster */
+    width: 70%;
+    margin: 10px auto 0 auto;    /* centered inside the card */
+  }
+  
+  /* Optional: give a bit more vertical spacing between cards */
+  .rosterSlot,
+  .coachSlot {
+    margin-bottom: 18px;
+  }
+  /* ===== Staff/Coaches mobile centering & offsets reset ===== */
+.coachContainer .coachesContent,
+.coachContainer .staffContent {
+  position: static !important;
+  left: auto !important;
+  align-items: center !important;
+}
+
+/* Desktop/tablet sane defaults (also helps laptops with narrow windows) */
+.coachContainer .coachSlot,
+.coachContainer .rosterSlot {
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 800px;
+  max-width: min(90%, 800px);
+}
+
+/* --- Mobile layout to mirror roster behavior --- */
+@media (max-width: 768px) {
+  .coachContainer nav { width: 100%; }
+
+  .coachContainer .coachSlot,
+  .coachContainer .rosterSlot {
+    width: 95% !important;
+    max-width: 520px !important;
+    margin: 14px auto !important;
+    padding: 14px !important;
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+
+  /* Kill the tiny horizontal nudge that's causing the right shift */
+  .coachSlot { left: 0 !important; }
+
+  .leftSide {
+    max-width: none !important;
+    flex-basis: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .leftSide img {
+    width: 120px !important;
+    height: 120px !important;
+    margin: 0 auto 10px auto !important;
+    object-fit: cover !important;
+  }
+
+  .rightSide {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    align-items: center !important;
+  }
+
+  .bio {
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 6px !important;
+  }
+
+  .bio h4,
+  .bio h5,
+  .rightSide h2 {
+    text-align: center !important;
+  }
+
+  /* Divider line like roster */
+  .greyline {
+    border: none !important;
+    height: 3px !important;
+    background-color: #002676 !important;
+    width: 70% !important;
+    margin: 8px auto !important;
+  }
+}
+/* --- Staff/Coaches card: let content size the box --- */
+.coachSlot {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    box-sizing: border-box;
+    height: auto !important;         /* kill any fixed heights */
+    min-height: 0 !important;
+    padding-bottom: 16px;             /* space so lines/contacts don't hug bottom */
+    overflow: visible;                /* ensure children aren't clipped */
+  }
+  
+  /* Make sure nothing in the right column uses absolute positioning on mobile */
+  .rightSide,
+  .bio {
+    position: static !important;
+    height: auto !important;
+  }
+  
+  /* Long emails/titles should wrap instead of pushing layout weirdly */
+  .bio h5,
+  .bio h4,
+  .rightSide h2 {
+    overflow-wrap: anywhere;          /* break long emails or titles */
+    word-break: break-word;
+    margin: 4px 0;
+  }
+  
+  /* In case any legacy float sneaks in, clear the card */
+  .coachSlot::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  /* Keep the portrait from overlapping text on small screens */
+  .leftSide img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Mobile layout — stack cleanly like roster */
+  @media (max-width: 768px) {
+    .coachSlot {
+      flex-direction: column;
+      align-items: center;
+      padding: 14px 14px 18px;
+      width: 95%;
+      max-width: 520px;
+      margin: 14px auto;
+    }
+  
+    .rightSide {
+      width: 100%;
+      text-align: center;
+    }
+  
+    /* Ensure the divider sits inside the card and adds vertical rhythm */
+    .greyline {
+      border: none;
+      height: 3px;
+      background-color: #002676;
+      width: 70%;
+      margin: 10px auto 0;
+    }
+  }
+  @media (max-width: 768px) {
+    /* 1) Roster & Staff (they both use .rosterBody) */
+    .rosterBody {
+      /* Make the page itself at least full “dynamic” viewport height */
+      min-height: 100vh;
+      min-height: 100svh;   /* small viewport (safe on mobile toolbars) */
+      min-height: 100dvh;   /* dynamic viewport (best on iOS/Android) */
+  
+      /* If the background is on the element itself, ensure it covers */
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: scroll;  /* avoid jank from fixed on mobile */
+    }
+  
+    /* If you’re using the ::before trick for rosterBody, make it fill too */
+    .rosterBody::before {
+      height: 100vh;
+      height: 100svh;
+      height: 100dvh;
+      background-size: cover;
+      background-position: center top;
+    }
+  
+    /* 2) Schedule page */
+    body.sched,
+    .wrapper {
+      /* ensure the wrapper/page fills the real mobile viewport */
+      min-height: 100vh;
+      min-height: 100svh;
+      min-height: 100dvh;
+  
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: scroll; /* override any fixed on mobile */
+    }
+  }
+  @media (max-width: 768px) {
+    header ul li a {
+      padding: 10px 8px;
+    }
+  }
+  @media (max-width: 768px) {
+    header {
+      justify-content: center;
+    }
+  
+    header ul {
+      justify-content: center;
+      width: 100%;
+    }
+  
+    header ul li a {
+      left: 0 !important;
+      font-size: 14px !important;
+      margin: 0 8px;
+    }
+  }
+  /* Improve tap target for Team dropdown on mobile */
+    @media (max-width: 768px) {
+    header ul li.dropdown > a {
+      padding: 10px 12px;
+      display: inline-block;
+      font-size: 12px !important;
+      top: 1px;
+    }
+  
+    /* Optional: show dropdown on tap instead of hover */
+    header ul li.dropdown:active .dropdown-menu,
+    header ul li.dropdown:focus-within .dropdown-menu {
+      display: flex;
+    }
+  }
+/* --- Mobile: single-row nav, no logo --- */
+@media (max-width: 768px) {
+    /* 1) Hide the logo so the nav gets the full width */
+    header .logo { 
+      display: none !important; 
+    }
+  
+    /* 2) Give the nav the entire row and keep it to one line */
+    header { 
+      padding: 8px 8px !important;                 /* tighter header */
+    }
+    header.sticky { 
+      padding: 4px 8px !important; 
+      background: #fff;                            /* already set in your CSS */
+    }
+  
+    header ul {
+      flex: 1 1 auto; 
+      min-width: 0;                                /* allow shrinking */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;              /* even spacing across */
+      gap: 0;                                      /* no extra gaps */
+      flex-wrap: nowrap;                           /* single row only */
+      overflow: hidden;                            /* no spillover */
+    }
+  
+    /* 3) Compact, still-tappable links */
+    header ul li { 
+      flex: 0 1 auto; 
+    }
+    header ul li a {
+      left: 0 !important;                          /* undo earlier -70px */
+      margin: 0;                                   
+      padding: 8px 6px;                            /* tap height without width bloat */
+      font-size: clamp(11px, 2.9vw, 13px) !important;
+      letter-spacing: 0.2px;                       /* reduce from 2px (saves width) */
+      white-space: nowrap;                         /* keep one line */
+    }
+  
+    /* Keep Team dropdown inside the screen on mobile */
+    header ul li .dropdown-menu {
+      left: auto;
+      right: 0;
+    }
+  }
+  
+  /* Extra squeeze for very narrow phones (<=360px) */
+  @media (max-width: 360px) {
+    header { padding: 6px 6px !important; }
+    header ul li a { 
+      padding: 7px 4px; 
+      font-size: clamp(10px, 3.2vw, 12px) !important;
+      letter-spacing: 0.1px;
+    }
+  }
+
+  
+    
