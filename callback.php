@@ -52,12 +52,18 @@ if (isset($_GET['code'])) {
             "dom_sedlak-braude@berkeley.edu",
             "n.tomic@berkeley.edu",
             "Ajbubbsis@gmail.com",
-            "devincox99@berkeley.edu"
+            "devincox99@berkeley.edu",
+            "everettmorton5@berkeley.edu",
+            "darieno@berkeley.edu",
+            "pravin_chandra@berkeley.edu"
         ];
         $admin_emails = [
             "allan.anaka@berkeley.edu",
             "jason_lee@berkeley.edu",
-            "devincox99@berkeley.edu"
+            "devincox99@berkeley.edu",
+            "everettmorton5@berkeley.edu",
+            "darieno@berkeley.edu",
+            "pravin_chandra@berkeley.edu"
           ];
 
         $admins = array_map(fn($e) => strtolower(trim($e)), $admin_emails);
