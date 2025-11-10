@@ -1660,6 +1660,39 @@ iframe {
       letter-spacing: 0.1px;
     }
   }
+@media (min-width: 769px) {
+     header ul { list-style: none; margin: 0; padding: 0; }
+     header ul > li { position: relative; } /* needed for absolute submenu */
+     header .dropdown > a::after {
+       content: "+";
+       margin-left: 6px;
+       font-weight: 700;
+       display: inline-block;
+       transform: translateY(-1px);
+       transition: transform .15s ease;
+     }
+
+     /* Show minus on hover (desktop) */
+     header .dropdown:hover > a::after { content: "–"; } /* en dash looks nice */
+     header .dropdown:hover > a::after { transform: translateY(-1px) rotate(0deg); }
+
+     /* Basic submenu behavior (if you want hover-open on desktop) */
+     header .dropdown-menu {
+       display: none;
+       position: absolute;
+       left: 0;
+       top: 100%;
+       z-index: 1000;
+     }
+     header .dropdown:hover > .dropdown-menu { display: block; }
+
+     /* Optional: when opened via JS on touch, keep minus visible */
+     header .dropdown.open > a::after { content: "–"; }
+
+     /* (Optional) small spacing so +/– isn’t crammed */
+     header ul > li > a { white-space: nowrap; }
+     }
+
 
   
     
