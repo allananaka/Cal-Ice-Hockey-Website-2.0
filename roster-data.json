@@ -122,6 +122,17 @@
       "image": "Headshots/bartolo.png"
     },
     {
+      "number": 17,
+      "name": "Connor Kanas",
+      "position": "forward",
+      "height": "5'11\"",
+      "handedness": "Shoots",
+      "hand": "L",
+      "hometown": "San Diego, CA",
+      "class": "Freshman",
+      "image": "Headshots/kanas.png"
+    },
+    {
       "number": 18,
       "name": "Tyson Storr",
       "position": "forward",
@@ -219,17 +230,6 @@
       "hometown": "Rancho Santa Margarita, CA",
       "class": "Freshman",
       "image": "Headshots/fazio.png"
-    },
-    {
-      "number": null,
-      "name": "Connor Kanas",
-      "position": "forward",
-      "height": "5'11\"",
-      "handedness": "Shoots",
-      "hand": "L",
-      "hometown": "San Diego, CA",
-      "class": "Freshman",
-      "image": "Headshots/kanas.png"
     },
     {
       "number": 4,
