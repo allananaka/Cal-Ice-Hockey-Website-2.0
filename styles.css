@@ -1028,6 +1028,31 @@ iframe {
     width: 50%;
   }
   .greyline { all: unset; display: block; }
+
+/* Video container */
+.blog-video {
+    margin: 2rem 0;
+}
+
+/* Make embedded video responsive */
+.blog-video iframe,
+.blog-video video {
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px; /* ← this gives rounded edges to the poster */
+    overflow: hidden;     /* ensures the poster doesn't spill outside the rounded corners */
+    background: #000;     /* optional — avoids white flashes before load */
+}
+
+/* Optional: tighter spacing on small screens */
+@media (max-width: 768px) {
+    .blog-video {
+        margin: 1.5rem 0;
+    }
+}
 @media(max-width:1250px){
     .articleThumbnail {
         width: 300px;
