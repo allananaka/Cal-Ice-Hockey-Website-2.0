@@ -18,3 +18,8 @@ node_modules/
 
 # Logs
 *.log
+# Large media
+videos/
+*.mp4
+*.MP4
+*.zip
