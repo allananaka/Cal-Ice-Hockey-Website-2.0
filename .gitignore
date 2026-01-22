@@ -23,3 +23,9 @@ videos/
 *.mp4
 *.MP4
 *.zip
+
+# Large media (keep out of git)
+videos/
+*.mp4
+*.MP4
+*.zip
