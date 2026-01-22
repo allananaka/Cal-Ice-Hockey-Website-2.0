@@ -1,0 +1,20 @@
+# Large media (DO NOT TRACK)
+videos/
+*.mp4
+*.MP4
+*.mov
+*.zip
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor junk
+.vscode/
+.idea/
+
+# Node / tooling (if added later)
+node_modules/
+
+# Logs
+*.log
