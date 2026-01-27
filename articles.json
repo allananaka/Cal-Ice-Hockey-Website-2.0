@@ -1,6 +1,14 @@
 {
   "articles": [
     {
+      "dateText": "26 January 2026",
+      "title": "Golden Bears Respond on Senior Night With Statement Win Over USC",
+      "titleClass": "articleTitle longTitle",
+      "excerpt": "The No. 8 California Golden Bears delivered a strong response on Senior Night, bouncing back from a tough loss to defeat conference rival USC 4–1 on January 24 at the Oakland Ice Center.",
+      "image": "images/article13.png",
+      "href": "articles/article13.html"
+    },
+    {
       "dateText": "16 January 2026",
       "title": "Golden Bears Back on the Ice After Winter Break",
       "titleClass": "articleTitle longTitle",
