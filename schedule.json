@@ -242,6 +242,15 @@
       "locationText": "@Sharks Ice - San Jose, CA",
       "scoreText": "Score:",
       "watchUrl": ""
+    },
+    {
+      "side": "right",
+      "opponent": "Cal Alumni Game",
+      "logo": "",
+      "datetimeText": "Saturday, January 31th 8:15pm",
+      "locationText": "@Oakland Ice Center",
+      "scoreText": "FREE ADMISION; Preskate 2-for-1 special w/ team @7:15pm",
+      "watchUrl": ""
     }
   ]
 }
