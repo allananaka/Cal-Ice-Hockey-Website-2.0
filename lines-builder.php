@@ -2,7 +2,7 @@
 session_start();
 require __DIR__ . '/../config.php';    
 
-// Check if user is signed in haha
+// Check if user is signed in mahahaha
 if (!isset($_SESSION['user'])) {
     header("Location: index.html");
     exit;
