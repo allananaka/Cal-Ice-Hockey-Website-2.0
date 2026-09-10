@@ -3,6 +3,7 @@ import Header from '../components/Header.jsx'
 import Footer from '../components/Footer.jsx'
 
 export default function Home() {
+  const announcement = false;
   return (
     <>
       <Header />
@@ -11,13 +12,13 @@ export default function Home() {
         <video id="background-video" autoPlay loop muted playsInline preload="metadata" poster="/images/HomeBanner-poster.jpg">
           <source src="/images/HomeBanner.mp4" type="video/mp4" />
         </video>
-
-        <a
+        {announcement &&
+          <a
           className="heroAnnouncement"
           href="https://www.gofevo.com/event/Universitycalifornia22"
           target="_blank"
           rel="noreferrer"
-        >
+          >
           <p className="heroAnnouncement__text">
             The Golden Bears and San Jose Sharks are hosting a youth hockey clinic at Oakland Ice Center
           </p>
@@ -27,6 +28,7 @@ export default function Home() {
             </svg>
           </span>
         </a>
+        }
       </section>
 
       <section className="MeetTheBears">
